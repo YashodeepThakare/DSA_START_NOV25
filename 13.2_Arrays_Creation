@@ -1,0 +1,27 @@
+* Array Creations:-
+*Operations in Array:-
+-Create
+-Input
+-Output
+-Update
+
+*Creating An Array
+-Syntax
+  dataType arrayName[]=new dataType[Size];
+  dataType is int ,float ,char anything you need to create which type of array
+  arrayName is the name of the array for accessing elements in the array
+  new keyword is used to allocate the memory to array.
+  [] sqaure bracket is the syntax part to creation of array.
+  Size is the array of size to create how many elements stored in array.
+
+ int marks[]=new int[50];
+  Array size is 50 it starts with oth based index.
+  Deafult values in int array is 0.
+-if you know the value of elements of the array when we create an array
+  int marks[]={ 90,96.98,80};
+  int numbers[]={2,4,6,8,10};
+-String Array
+  String fruits[]={"Apple","Mango","Banana"};
+  // double quotes when String write .
+  
+
