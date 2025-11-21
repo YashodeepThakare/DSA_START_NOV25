@@ -1,0 +1,5 @@
+Introduction of the Array:-
+-List of elements of the same type placed in a continuous memory location.
+-Array Starts with o th based index in java and c++.
+-Ex.Array Size is 50 then starts with o to 49 that is 50 size of the array.
+-Array has contains same type of elements not combined float,char,string in one array.
