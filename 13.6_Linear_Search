@@ -1,0 +1,29 @@
+*Linear Search:-
+-Very simple technique in ds and it finds the key element one by one in the array.
+code:-
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main"
+class Main {
+    public static int findEelement(int arr[],int key){
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==key){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static void main(String[] args) {
+        int arr[]={2,4,6,8,10};
+        int key=6;
+        int index=findEelement(arr,key);
+        if(index!=-1){
+            System.out.println(key+" Element found in "+(index+1)+"th position in the array");
+        }
+        else{
+            System.out.println(key+" Element not found in array");
+        }
+    }
+}
