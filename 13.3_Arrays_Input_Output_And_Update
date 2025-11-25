@@ -1,0 +1,28 @@
+*Arrays Input,output and Update
+- when need to take inputs from user then used scanner class for input and it in the java.util package.
+-Code:-
+import java.util.*;
+
+
+// The main method must be in a class named "Main"
+class Main {
+    public static void main(String[] args) {
+ Scanner sc=new Scanner(System.in);
+        int arr[]=new int[3];
+        System.out.println("Eneter the 3 subject marks");
+        // inputs to stored in array
+        //nextInt() is amethod to stored int to arrays 
+        arr[0]=sc.nextInt();
+        arr[1]=sc.nextInt();
+        arr[2]=sc.nextInt();
+        // outputs
+        System.out.println("Your Marks :-");
+        System.out.println(arr[0]);
+        System.out.println(arr[1]);
+        System.out.println(arr[2]);
+        //updation 
+        arr[1]=100;
+        System.out.println(arr[1]);
+        sc.close();
+            }
+}
