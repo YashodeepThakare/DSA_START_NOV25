@@ -1,0 +1,34 @@
+* Find the largest number in a given array.
+arr[]={1,2,6,3,5};
+code:-
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main"
+class Main {
+    public static int findLargest(int arr[]){
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            if(max<arr[i]){
+                max=arr[i];   
+                }
+ 
+        }
+        return max;
+    }
+    public static void main(String[] args) {
+        int arr[]={1,2,6,3,5};
+        System.out.println(findLargest(arr));
+
+    }
+}
+
+// output:-
+6
+
+// Note:-
+-when you find largest element in that array totake max is Interger.MIN_VALUE it smallest value stored and when you find smallest element in thst array totake the min 
+is Integer.MAX_VALUE; it stores the very largest value in that min.
+
+
