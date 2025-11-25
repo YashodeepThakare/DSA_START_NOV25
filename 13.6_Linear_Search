@@ -1,5 +1,6 @@
 *Linear Search:-
 -Very simple technique in ds and it finds the key element one by one in the array.
+-find the index of the element in a given array.
 code:-
 import java.util.*;
 import java.lang.*;
