@@ -1,0 +1,62 @@
+* Binary Search:-
+-prerequisite -sorted array need
+-Binary Search is very fast and efficient.
+-either array is assending order sorted or decending order sorted.
+-Given Array={2,4,6,8,10,12,14}; find  key=10 in the given array.
+--Pseudocode:-
+start=0,end=n-1
+while(start<=end)
+find mid
+compare mid and key
+mid==key  --->Found
+mid<key --->right
+mid>key---> left
+
+
+-code:-
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main"
+class Main {
+    public static int findElement(int arr[],int key){
+        int start=arr[0];
+        int end=arr.length-1;
+        while(start<=end){
+            int mid=(start+end)/2;
+            if(arr[mid]==key){
+                return mid;
+            }
+            else if(arr[mid]<key){
+                start=mid+1;
+            }
+            else{
+                end=mid-1;
+            }
+        }
+        return -1;
+    }
+    
+    public static void main(String[] args) {
+        int arr[]={2,4,6,8,10,12,14};
+        int key=10;
+        int index=findElement(arr,key);    
+        if(index==-1){
+          System.out.println("Not Found in the array");
+        }
+        else{
+       System.out.println(key+" element found in "+index+"th position in the array");
+
+        }
+            
+
+    }
+}
+// output:-
+10 element found in 4th position in the array
+
+Note:-
+when element not found then retruns -1 and print the key element not found in the array or it retuns the index value that means key element found in the array and 
+print the key element found in that array and also display the index which index number comes.
+
