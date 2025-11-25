@@ -59,4 +59,23 @@ class Main {
 Note:-
 when element not found then retruns -1 and print the key element not found in the array or it retuns the index value that means key element found in the array and 
 print the key element found in that array and also display the index which index number comes.
+-Time complexity:- k=(log2)n
+Explaination==>  
+1st iteration---n/2        -- n/2^0
+2nd Iteration--n/4        --- n/2^2
+3rd Iteration--n/8        ---n/2^4
+               .
+               .
+               .
+              1            --n/2^K=1
+
+                    n/2^k=1
+                    n=2^k
+                   apply log2
+                log2n=(log2)2^k
+                  log2n=k(1)------------log2^2=1  -----(log2)2^k----k.log2^2.
+                  k=log2n  -------Time Complexity
+                O(logn)------neglate constant
+               linear search T.C.=n > Binary Search T.C.=logn ------Linear search takes more time than binanry search to find element in the array and Binary Search more efficient than linear search only if array is sorted .
+-Binary Search Array is needed to sorted array.
 
