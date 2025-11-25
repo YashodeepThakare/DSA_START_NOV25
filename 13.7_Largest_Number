@@ -19,13 +19,14 @@ class Main {
     }
     public static void main(String[] args) {
         int arr[]={1,2,6,3,5};
-        System.out.println(findLargest(arr));
+        System.out.println("Largest Number is "+findLargest(arr));
 
     }
 }
 
 // output:-
-6
+Largest Number is 6
+
 
 // Note:-
 -when you find largest element in that array totake max is Interger.MIN_VALUE it smallest value stored and when you find smallest element in thst array totake the min 
