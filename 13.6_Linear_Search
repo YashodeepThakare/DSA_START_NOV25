@@ -17,7 +17,7 @@ class Main {
     }
     public static void main(String[] args) {
         int arr[]={2,4,6,8,10};
-        int key=6;
+        int key=8;
         int index=findEelement(arr,key);
         if(index!=-1){
             System.out.println(key+" Element found in "+(index+1)+"th position in the array");
@@ -27,3 +27,8 @@ class Main {
         }
     }
 }
+
+//Output:-
+8 Element found in 4th position in the array
+
+// if element found in array oit return the index other wise retrurn -1 that means not found the elem=ent in that array.
