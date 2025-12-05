@@ -1,5 +1,5 @@
 //*Print_Sub_Array:-
-
+// A continueous part of array.
 import java.util.*;
 import java.lang.*;
 import java.io.*;
