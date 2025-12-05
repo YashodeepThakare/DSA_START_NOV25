@@ -1,0 +1,51 @@
+//*Print_Sub_Array:-
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main"
+class Main {
+    public static void prinSubArr(int arr[]){
+        for(int k=0;k<arr.length;k++){
+         for(int i=k;i<arr.length;i++){
+            for(int j=k;j<=i;j++){
+                System.out.print(arr[j]+" ");
+            }
+                        System.out.println();
+
+        }
+                                System.out.println();
+
+
+        }
+    }
+    public static void main(String[] args) {
+        int arr[]={2,4,6,8,10};
+        prinSubArr(arr);
+
+    }
+}
+
+// Output:-
+2 
+2 4 
+2 4 6 
+2 4 6 8 
+2 4 6 8 10 
+
+4 
+4 6 
+4 6 8 
+4 6 8 10 
+
+6 
+6 8 
+6 8 10 
+
+8 
+8 10 
+
+10 
+
+
