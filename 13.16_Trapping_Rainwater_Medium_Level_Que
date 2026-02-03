@@ -1,0 +1,46 @@
+Trapping Rainwater Problem Medium Level
+Gievn non-negative integers representing an elevation(height) map where the width of each bar is 1, compute how much water it can trap after raining,
+
+Hight of array={4,2,0,6,3,2,5};
+Code:-
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main"
+class Main {
+    public static void findtrappedRainwater(int heightArr[]){
+        int n=heightArr.length;
+        int leftArr[]=new int[n];
+        int rightArr[]=new int[n];
+        leftArr[0]=heightArr[0];
+        for(int i=1;i<n;i++){
+            leftArr[i]=Math.max(leftArr[i-1],heightArr[i]);
+        }
+        rightArr[n-1]=heightArr[n-1];
+        for(int k=n-2;k>=0;k--){
+            rightArr[k]=Math.max(rightArr[k+1],heightArr[k]);
+        }
+        int totalWater=0;
+        for(int l=0;l<n;l++){
+            totalWater=totalWater+(Math.min(leftArr[l],rightArr[l])-heightArr[l]);
+        }
+        System.out.println("Total trapped rainwater ="+totalWater);
+        // for(int j=0;j<n;j++){
+        //     System.out.println(rightArr[j]);
+        // }
+
+    }
+    public static void main(String[] args) {
+        int heightArr[]={4,2,0,6,3,2,5};
+        findtrappedRainwater(heightArr);
+    }
+}
+
+Output:-Time Complexity: ✅ O(n)
+
+Space Complexity: ✅ O(n)
+
+Total trapped rainwater =11
+
+Time complexity:-
