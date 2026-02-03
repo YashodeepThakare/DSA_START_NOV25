@@ -1,0 +1,55 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main"
+class Main {
+    public static void subarrayPrefix(int arr[]){
+        int prefixNewArray[]=new int[arr.length];
+        prefixNewArray[0]=arr[0];
+        for(int i=1;i<arr.length;i++){
+            prefixNewArray[i]=arr[i]+prefixNewArray[i-1];
+        }
+         int sum=0;
+         int max=Integer.MIN_VALUE;
+         for(int j=0;j<prefixNewArray.length;j++)
+             {
+                 int start=j;
+            for(int k=j;k<prefixNewArray.length;k++)
+            {
+                            int end=k;
+
+              sum=(start==0)?prefixNewArray[end]:prefixNewArray[end]-prefixNewArray[start-1];
+                       System.out.println(sum);
+
+
+            }
+            if(max<sum)
+            max=sum;
+         }
+         System.out.println("MAx is:-"+max);
+    }
+    public static void main(String[] args) {
+        int arr[]={1,-2,6,-1,3};
+        subarrayPrefix(arr);
+
+    }
+}
+
+output:-
+1
+-1
+5
+4
+7
+-2
+4
+3
+6
+6
+5
+8
+-1
+2
+3
+MAx is:-8
