@@ -1,0 +1,58 @@
+*:-   Max_SubArray_Sum
+find max suubarray sum
+       
+array given:- int arr[]={1,-2,6,-1,3};
+Ans:-8
+
+
+
+code:-
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main"
+class Main {
+    public static void   findmaxSubarr(int arr[]){
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            for(int j=i;j<arr.length;j++){
+                        int sum=0;
+                for(int k=i;k<=j;k++){
+                    System.out.print(arr[k]+" ");
+                    sum=sum+arr[k];
+                }
+                System.out.println();
+                if(max<sum)
+                max=sum;
+
+            }
+        }
+        System.out.println("Max Subarray  Sum="+max);
+        
+    }
+    public static void main(String[] args) {
+        int arr[]={1,-2,6,-1,3};
+        findmaxSubarr(arr);
+        
+           }
+}
+
+Output:-
+1 
+1 -2 
+1 -2 6 
+1 -2 6 -1 
+1 -2 6 -1 3 
+-2 
+-2 6 
+-2 6 -1 
+-2 6 -1 3 
+6 
+6 -1 
+6 -1 3 
+-1 
+-1 3 
+3 
+Max Subarray  Sum=8
+
