@@ -1,0 +1,38 @@
+
+code:-
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main"
+class Main {
+    public static void insertionSort(int arr[]){
+        int n=arr.length;
+        int key;
+        for(int i=1;i<n;i++){
+             key=arr[i];
+             int j=i-1;
+            for(;j>=0;j--){
+                if(arr[j]> key){
+                    arr[j+1]=arr[j];
+                }
+                else{break;}
+              
+            }
+            arr[j+1]=key;
+        }
+        printArr(arr,n);
+        
+    }
+    public static void printArr(int arr[],int n){
+            for(int k=0;k<n;k++){
+                System.out.print(arr[k]+" ");
+            }
+        }
+    public static void main(String[] args) {
+        int arr[]={5,4,1,3,2};
+        insertionSort(arr);
+    }
+}
+
+output:- 1,2,3,4,5
