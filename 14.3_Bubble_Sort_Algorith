@@ -1,0 +1,49 @@
+Bubble sort:- Large elements comes at the end of the array by swapping adjacent elemnts.
+Array:- 5,4,1,3,2,1
+
+code:-
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main"
+class Main {
+    public static void bubbleSort(int arr[]){
+        int n=arr.length;
+        int temp;
+        for(int i=0;i<n-1;i++){
+            for(int j=0;j<n-i-1;j++){
+                if(arr[j] > arr[j+1]){
+                    temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
+                
+            }
+           
+        }
+                    printSortArray(arr);
+
+        }
+        public static void printSortArray(int arr[]){
+             System.out.println("Sorted Array :");
+            for(int i=0;i<arr.length;i++){
+                System.out.print(arr[i]+" ");
+            }
+            System.out.println();
+        }
+    
+    public static void main(String[] args) {
+    int arr[]={5,4,1,3,2};
+    bubbleSort(arr);
+
+    }
+}
+
+
+Output:-
+Sorted Array :
+1 2 3 4 5 
+
+Time Complx.:- o(n^2).
+Space COmplx.:- o(1).
